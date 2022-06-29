@@ -30,3 +30,46 @@ WantedBy=default.target
 ![image](https://user-images.githubusercontent.com/106814458/176321014-59b4e8b6-6488-4c82-8644-948fa39d1eb1.png)
 
 ![image](https://user-images.githubusercontent.com/106814458/176321037-345481c0-6384-4f9a-a4fd-940723cb1804.png)
+
+2. Ознакомьтесь с опциями node_exporter и выводом /metrics по-умолчанию. Приведите несколько опций, которые вы бы выбрали для базового мониторинга хоста по CPU, памяти, диску и сети.
+
+
+`Для CPU:`
+> node_cpu_seconds_total{cpu="0",mode="user"}
+> 
+> node_cpu_seconds_total{cpu="0",mode="system"}
+> 
+>node_cpu_seconds_total{cpu="0",mode="idle"}
+
+`Для NETWORK:`
+
+> node_network_receive_bytes_total
+>
+> node_network_receive_errs_total
+>
+> node_network_transmit_bytes_total
+
+`Для Disk:`
+
+> node_disk_io_time_seconds_total
+>
+> node_disk_written_bytes_total
+>
+> node_disk_read_bytes_total
+
+`Для Memory:`
+
+> node_memory_MemAvailable_bytes
+>
+> node_memory_MemFree_bytes
+>
+> ode_memory_MemTotal_bytes
+
+
+3. Установите в свою виртуальную машину Netdata. Воспользуйтесь готовыми пакетами для установки (sudo apt install -y netdata). После успешной установки:
+
+`Ознакомился с метриками которые по умолчанию собирает Netdata`
+
+![image](https://user-images.githubusercontent.com/106814458/176325865-06d1f4c6-9d1a-42c4-9d13-04d025e1fd66.png)
+
+
